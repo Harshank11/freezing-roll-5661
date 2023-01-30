@@ -17,7 +17,7 @@ import {
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import Bag_Drawer from "../Bag/Bag_Drawer";
-import Search from "../ProductData/Search";
+
 import { AppContext } from "../Context/ContextProvider";
 
 const Navbar = () => {
@@ -104,13 +104,12 @@ const Navbar = () => {
               </Box>
               <Box className="loc_screen"></Box>
             </Box>
-            <Box className="search_bar" zIndex={1}>
-              {/* <Input
+            <Box className="search_bar disabled">
+              <Input
                 className="search_input"
                 placeholder="Search for any delicious product"
                 type={"search"}
-              /> */}
-              <Search/>
+              />
             </Box>
 
             </Hide>
@@ -124,13 +123,12 @@ const Navbar = () => {
                   <MenuButton
                     _hover={{ color: "#D11243" }}
                     style={{
-                      marginLeft: "8px",
-                      // fontSize: "12px",
+                      marginLeft: "10px",
+                      fontSize: "12px",
                       lineHeight: "14px",
                       color: "#000",
                     }}
-                    fontSize={{ base: '25px', md: '20px', lg: '16px' }}
-                    // className="categories_icon_scrollbar"
+                    className="categories_icon_scrollbar"
                   >
                     Categories
                   </MenuButton>
@@ -331,12 +329,10 @@ const Navbar = () => {
               <Box className="profile">
                 <a href="#">
                   <Box className="profile_container" display="flex" gap="20px">
-                    <Hide below="lg">
                     <Box className="username_container" textColor="#5c5c5c">
                       <Box onClick={() => Navigate("/signup")}>signup</Box>
                     </Box>
-                    </Hide>
-                    <Box className="username_container" fontSize={{ base: '27px', md: '20px', lg: '16px' }} marginLeft={{ base: '60px', md: '20px', lg: '16px' }} textColor="#5c5c5c">
+                    <Box className="username_container" textColor="#5c5c5c">
                       <Box onClick={() => Navigate("/login")}>login</Box>
                     </Box>
                   </Box>
@@ -353,11 +349,9 @@ const Navbar = () => {
                   />
                 </a>
               </Box>
-              <Hide below="md">
-              <Box className="cart_details" fontSize={{ base: '25px', md: '20px', lg: '16px' }}>
+              <Box className="cart_details">
                 <Text className="cart_text">Cart</Text>
               </Box>
-              </Hide>
             </Box>
           </Box>
         </Box>

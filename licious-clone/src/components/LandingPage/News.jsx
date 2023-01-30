@@ -6,26 +6,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function SampleNextArrow(props){
-const {className,style,onClick}=props
-return(
-        <div className={className}
-        style={{...style, display:"block",right:"8px",
-        backgroundColor:"gray", borderRadius:"50%" }}
-    onClick={onClick}  > </div>
-    )
-}
-
-function SamplePrevArrow(props){
-    const {className,style,onClick}=props
-    return(
-        <div className={className}
-        style={{...style, display:"block",right:"-37px",
-        // border:"5px solid red",
-        backgroundColor:"gray", borderRadius:"50%"}}
-     onClick={onClick}  > </div>
-    )
-
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -62,7 +42,6 @@ function SamplePrevArrow(props) {
       {" "}
     </div>
   );
-
 }
 
 const News = () => {
@@ -74,70 +53,6 @@ const News = () => {
   //     xl:"1100px",
   //     "2xl":"1600px"
   // }
-
-
-    const boxStyle={
-        display:"flex",
-        alignItem:"centet",
-        justifyContent:"center",
-        boxSize:"250px",
-        color:"#fff",
-        textShadow:"0 0 20px black",
-        fontWeight:"bold",
-        fontSize:"20px",
-    }
-    let settings={
-        infinite:true,
-        speed:500,
-        slidesToShow:5,
-        slidesToScroll:1,
-        initialSlide:0,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
-        responsive:[
-            {
-                breakpoint:1281,
-                settings:{
-                    slidesToShow:4,
-                    slidesToScroll:1,
-                    infinite:true
-                },
-            },
-            {
-                breakpoint:1024,
-                settings:{
-                    slidesToShow:3,
-                    slidesToScroll:1,
-                    infinite:true,
-                },
-            },
-            {
-                breakpoint:600,
-                settings:{
-                    slidesToScroll:1,
-                    slidesToShow:2,
-                    initialSlide:2,
-                    infinite:true
-                },
-            },
-            {
-                breakpoint:480,
-                settings:{
-                    slidesToScroll:1,
-                    slidesToShow:1,
-                    infinite:true,
-                    initialSlide:1,
-                },
-            },
-        ],
-    };
-  
-    useEffect(()=>{
-        axios.get('https://licious-database.vercel.app/news').then((res)=>{
-          setnewsData(res.data)
-        })
-      },[])
-    
 
   const boxStyle = {
     display: "flex",
@@ -200,7 +115,6 @@ const News = () => {
       setnewsData(res.data);
     });
   });
-
 
   return (
     <>

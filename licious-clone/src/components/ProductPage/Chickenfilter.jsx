@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { getProducts } from "../../Redux/ProductReducer/action";
 import "./Product.css";
-import { Hide } from "@chakra-ui/react";
 
 const Chickenfilter = () => {
   const dispatch = useDispatch();
@@ -30,9 +29,8 @@ const Chickenfilter = () => {
   }, [category, dispatch, setSearhParams]);
 
   return (
-    <div>     
-      <Hide below="md" >
-      <div className="product_sort_start1"  >
+    <div>      
+      <div className="product_sort_start1">
       <div className="product_sort_start2">
           <input         
             type="checkbox"
@@ -114,7 +112,6 @@ const Chickenfilter = () => {
           <label className="product_sort_input1">Meat Masalas</label>
         </div>
       </div>
-      </Hide> 
     </div>
   );
 };
