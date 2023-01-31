@@ -32,7 +32,7 @@ Start the server
 
 ## Deployment Link
 
-https://licious-freezing.netlify.app/
+https://licious-clone-three.vercel.app/
 
 ## Tech Stack
 
