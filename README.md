@@ -127,7 +127,7 @@ This clone website makes by 5 developers in 5 days. Our Team Leader name is Anur
 
 End Notes 📑
 
-In this project, we tried to achieve a nearly perfect clone of the original website as much as possible. This entire journey of this construct week has given us experiences and we have learned lots of things by applying to the real website and it gave us a lot of confidence. Most of the features are added and the functionality of the website is achieved.
+In this project, we tried to achieve a nearly perfect clone of the original website as much as possible. This entire journey of this construct week has given us experiences and we have learned lots of things by applying to the real website and it gave us a lot of confidence. Most of the features are added and the functionality of the website is achieved..
 
 
 
